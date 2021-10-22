@@ -10,13 +10,21 @@ import UIKit
 class NoteViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var textView: UITextView!
+    public weak var outputVC: ViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        navigationItem.rightBarButtonItem =
+            UIBarButtonItem(barButtonSystemItem: .done,
+                            target: self,
+                            action: #selector(didTapSaveNote(button:)))
     }
     
+    @objc func didTapSaveNote(button: UIBarButtonItem) {
+        
+    }
 
     /*
     // MARK: - Navigation
