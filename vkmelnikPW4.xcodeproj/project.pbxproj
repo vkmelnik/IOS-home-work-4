@@ -13,6 +13,8 @@
 		125F1075272178A1006BE69A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125F1073272178A1006BE69A /* Main.storyboard */; };
 		125F1077272178A2006BE69A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 125F1076272178A2006BE69A /* Assets.xcassets */; };
 		125F107A272178A2006BE69A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125F1078272178A2006BE69A /* LaunchScreen.storyboard */; };
+		125F108227218401006BE69A /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F108127218401006BE69A /* NoteCell.swift */; };
+		125F108427218557006BE69A /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F108327218557006BE69A /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		125F1076272178A2006BE69A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		125F1079272178A2006BE69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		125F107B272178A2006BE69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		125F108127218401006BE69A /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		125F108327218557006BE69A /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				125F1076272178A2006BE69A /* Assets.xcassets */,
 				125F1078272178A2006BE69A /* LaunchScreen.storyboard */,
 				125F107B272178A2006BE69A /* Info.plist */,
+				125F108127218401006BE69A /* NoteCell.swift */,
+				125F108327218557006BE69A /* NoteViewController.swift */,
 			);
 			path = vkmelnikPW4;
 			sourceTree = "<group>";
@@ -140,6 +146,8 @@
 				125F1072272178A1006BE69A /* ViewController.swift in Sources */,
 				125F106E272178A1006BE69A /* AppDelegate.swift in Sources */,
 				125F1070272178A1006BE69A /* SceneDelegate.swift in Sources */,
+				125F108427218557006BE69A /* NoteViewController.swift in Sources */,
+				125F108227218401006BE69A /* NoteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
