@@ -91,6 +91,21 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let identifier = "\(indexPath.row)" as NSString
+        return UIContextMenuConfiguration(identifier: identifier, previewProvider: .none) { _ in
+            let deleteAction = UIAction(
+                                        title: "Delete",
+                                        image: UIImage(systemName: "trash"),
+                                        attributes: UIMenuElement.Attributes.destructive) { value in
+                self.context.delete(self.notes[indexPath.row])
+                self.saveChanges()
+                collectionView.reloadData()
+            }
+            return UIMenu(title: "", image: nil, children: [deleteAction])
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         return CGSize(width: view.frame.width - 20, height: 110.0)
