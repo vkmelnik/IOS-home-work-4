@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -15,6 +16,16 @@ class ViewController: UIViewController {
         }
     }
     
+    let context: NSManagedObjectContext = {
+        let container = NSPersistentContainer(name: "CoreDataNotes")
+        container.loadPersistentStores { _, error in
+            if let error = error {
+                fatalError("Container loading failed")
+            }
+        }
+        return container.viewContext
+    }()
+    
     @IBOutlet weak var emptyCollectionLabel: UILabel!
     @IBOutlet weak var notesCollectionView: UICollectionView!
 
@@ -22,6 +33,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        self.loadData()
         navigationItem.rightBarButtonItem =
             UIBarButtonItem(barButtonSystemItem: .add,
                             target: self,
@@ -31,6 +43,26 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         notesCollectionView.reloadData()
+    }
+    
+    func loadData() {
+        if let notes = try? context.fetch(Note.fetchRequest()) as? [Note] {
+            self.notes = notes.sorted(by:
+                                        { $0.creationDate.compare($1.creationDate) == .orderedDescending })
+        } else {
+            self.notes = []
+        }
+    }
+    
+    func saveChanges() {
+        if context.hasChanges {
+            try? context.save()
+        }
+        if let notes = try? context.fetch(Note.fetchRequest()) as? [Note] {
+            self.notes = notes
+        } else {
+            self.notes = []
+        }
     }
 
     @objc func createNote(sender: UIBarButtonItem) {
@@ -54,7 +86,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NoteCell", for: indexPath) as! NoteCell
         let note = notes[indexPath.row]
         cell.titleLabel.text = note.title
-        cell.descriptionLabel.text = note.description
+        cell.descriptionLabel.text = note.descriptionText
         
         return cell
     }
