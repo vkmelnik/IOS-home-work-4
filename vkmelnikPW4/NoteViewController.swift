@@ -11,6 +11,7 @@ class NoteViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var textView: UITextView!
     public weak var outputVC: ViewController!
+    public weak var noteLink: Note?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class NoteViewController: UIViewController {
             newNote.title = title
             newNote.descriptionText = description
             newNote.creationDate = Date()
+            newNote.linkToNote = noteLink
             outputVC.saveChanges()
         }
         self.navigationController?.popViewController(animated: true)

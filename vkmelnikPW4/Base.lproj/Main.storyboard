@@ -21,35 +21,45 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" red="0.93202665566168363" green="0.93802565119532644" blue="0.97204924420000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZBj-SO-tty">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="373" height="152"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NoteCell" id="O3J-lq-MNh" customClass="NoteCell" customModule="vkmelnikPW4" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="176" height="117"/>
+                                        <rect key="frame" x="20.5" y="10" width="373" height="152"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xo6-K8-peC">
-                                            <rect key="frame" x="0.0" y="0.0" width="176" height="117"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="152"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sm2-3p-5V6">
-                                                    <rect key="frame" x="8" y="8" width="160" height="21"/>
+                                                    <rect key="frame" x="8" y="8" width="357" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                     <color key="textColor" red="0.00055753461227463306" green="0.025597624568900919" blue="0.083452294435215957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NE-ln-zOn">
-                                                    <rect key="frame" x="8" y="37" width="160" height="19.5"/>
+                                                    <rect key="frame" x="8" y="36.5" width="357" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                                     <color key="textColor" red="0.00055753461230000003" green="0.025597624570000001" blue="0.083452294440000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" systemColor="labelColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCF-Dt-jSH" customClass="NoteSubCell" customModule="vkmelnikPW4" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="84" width="353" height="60"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="6FC-4i-Ody"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="nCF-Dt-jSH" firstAttribute="leading" secondItem="xo6-K8-peC" secondAttribute="leading" constant="10" id="2dB-Zy-sMu"/>
                                                 <constraint firstAttribute="trailing" secondItem="sm2-3p-5V6" secondAttribute="trailing" constant="8" id="37z-63-7O6"/>
+                                                <constraint firstAttribute="bottom" secondItem="nCF-Dt-jSH" secondAttribute="bottom" constant="8" id="8gj-vH-q5O"/>
                                                 <constraint firstItem="5NE-ln-zOn" firstAttribute="top" secondItem="sm2-3p-5V6" secondAttribute="bottom" constant="8" symbolic="YES" id="EGf-jS-xnL"/>
+                                                <constraint firstAttribute="trailing" secondItem="nCF-Dt-jSH" secondAttribute="trailing" constant="10" id="Hd3-Xe-mXw"/>
                                                 <constraint firstItem="sm2-3p-5V6" firstAttribute="top" secondItem="xo6-K8-peC" secondAttribute="top" constant="8" id="R1c-bw-Hbf"/>
                                                 <constraint firstItem="sm2-3p-5V6" firstAttribute="leading" secondItem="xo6-K8-peC" secondAttribute="leading" constant="8" id="R5o-5t-2yD"/>
                                                 <constraint firstItem="5NE-ln-zOn" firstAttribute="leading" secondItem="xo6-K8-peC" secondAttribute="leading" constant="8" id="bh2-Ab-ZdY"/>
@@ -57,13 +67,14 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.95904495391338762" green="0.88873673426976163" blue="0.35938802152602084" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <size key="customSize" width="176" height="117"/>
+                                        <size key="customSize" width="373" height="152"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <outlet property="NoteSubCell" destination="nCF-Dt-jSH" id="2pN-nh-dSd"/>
                                             <outlet property="descriptionLabel" destination="5NE-ln-zOn" id="l3l-Ts-eGn"/>
                                             <outlet property="titleLabel" destination="sm2-3p-5V6" id="49L-rH-tX2"/>
                                         </connections>

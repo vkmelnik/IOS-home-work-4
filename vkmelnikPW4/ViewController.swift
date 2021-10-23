@@ -75,6 +75,17 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func createLinkedNote(note: Note) {
+        guard let vc = storyboard?.instantiateViewController(
+                withIdentifier: "NoteViewController") as? NoteViewController
+        else {
+            return
+        }
+        vc.outputVC = self
+        vc.noteLink = note
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -87,6 +98,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let note = notes[indexPath.row]
         cell.titleLabel.text = note.title
         cell.descriptionLabel.text = note.descriptionText
+        if (note.linkToNote != nil) {
+            cell.NoteSubCell.isHidden = false
+            cell.NoteSubCell.titleLabel!.text = note.linkToNote!.title
+            cell.NoteSubCell.descriptionLabel!.text = note.linkToNote!.descriptionText
+        } else {
+            cell.NoteSubCell.isHidden = true
+        }
         
         return cell
     }
@@ -102,13 +120,22 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                 self.saveChanges()
                 collectionView.reloadData()
             }
-            return UIMenu(title: "", image: nil, children: [deleteAction])
+            let createLinkedAction = UIAction(
+                                        title: "Create linked note",
+                                        image: UIImage(systemName: "arrowshape.zigzag.right")) { value in
+                self.createLinkedNote(note: self.notes[indexPath.row])
+            }
+            return UIMenu(title: "", image: nil, children: [createLinkedAction, deleteAction])
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width: view.frame.width - 20, height: 110.0)
+        if ((notes[indexPath.row].linkToNote) != nil) {
+            return CGSize(width: view.frame.width - 20, height: 170.0)
+        } else {
+            return CGSize(width: view.frame.width - 20, height: 110.0)
+        }
     }
     
 }
