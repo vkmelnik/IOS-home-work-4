@@ -77,7 +77,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return notes.count
     }
@@ -89,6 +89,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.descriptionLabel.text = note.descriptionText
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: view.frame.width - 20, height: 110.0)
     }
     
 }

@@ -19,9 +19,9 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6f4-He-7ml">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" red="0.074362821357194742" green="0.074362821357194742" blue="0.074362821357194742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Rw-9y-qZ9">
-                                    <size key="itemSize" width="176" height="117"/>
+                                <color key="backgroundColor" red="0.93202665566168363" green="0.93802565119532644" blue="0.97204924420000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZBj-SO-tty">
+                                    <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -56,7 +56,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="5NE-ln-zOn" secondAttribute="trailing" constant="8" id="lKb-AC-KjX"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" red="0.66383812163010159" green="0.81909565136864293" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.95904495391338762" green="0.88873673426976163" blue="0.35938802152602084" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="customSize" width="176" height="117"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -77,12 +77,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No notes yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8O5-fC-YIF">
                                 <rect key="frame" x="149.5" y="435.5" width="115.5" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="0.86311931157988875" green="0.89000000000000001" blue="0.54137052035934574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.036225509976012121" green="0.037397314939784043" blue="0.022508674047956308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.074362821359999998" green="0.074362821359999998" blue="0.074362821359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.93202665569999998" green="0.93802565120000003" blue="0.97204924420000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8O5-fC-YIF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7P0-PU-crw"/>
                             <constraint firstItem="6f4-He-7ml" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fct-mO-TGC"/>
