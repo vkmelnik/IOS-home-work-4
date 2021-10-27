@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121ACB172724303E00115D8D /* MappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 121ACB162724303E00115D8D /* MappingModel.xcmappingmodel */; };
 		1255B4EE272411A300976FE8 /* CoreDataNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1255B4EC272411A300976FE8 /* CoreDataNotes.xcdatamodeld */; };
 		1255B4F42724167500976FE8 /* UIView_Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255B4F32724167500976FE8 /* UIView_Pin.swift */; };
 		1255B4FA2724206A00976FE8 /* NoteSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255B4F92724206A00976FE8 /* NoteSubCell.swift */; };
@@ -23,11 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		121ACB162724303E00115D8D /* MappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = MappingModel.xcmappingmodel; sourceTree = "<group>"; };
 		1255B4ED272411A300976FE8 /* CoreDataNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataNotes.xcdatamodel; sourceTree = "<group>"; };
 		1255B4F32724167500976FE8 /* UIView_Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Pin.swift; sourceTree = "<group>"; };
 		1255B4F92724206A00976FE8 /* NoteSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSubCell.swift; sourceTree = "<group>"; };
 		1255B4FB27242A7C00976FE8 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1255B4FC27242A7C00976FE8 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1255B4FF27242B4300976FE8 /* CoreDataNotes 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataNotes 2.xcdatamodel"; sourceTree = "<group>"; };
 		125F106A272178A0006BE69A /* vkmelnikPW4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkmelnikPW4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		125F106D272178A1006BE69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		125F106F272178A1006BE69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 				1255B4FB27242A7C00976FE8 /* Note+CoreDataClass.swift */,
 				1255B4FC27242A7C00976FE8 /* Note+CoreDataProperties.swift */,
 				1255B4EC272411A300976FE8 /* CoreDataNotes.xcdatamodeld */,
+				121ACB162724303E00115D8D /* MappingModel.xcmappingmodel */,
 				125F106C272178A0006BE69A /* vkmelnikPW4 */,
 				125F106B272178A0006BE69A /* Products */,
 			);
@@ -163,6 +167,7 @@
 				125F1070272178A1006BE69A /* SceneDelegate.swift in Sources */,
 				125F108427218557006BE69A /* NoteViewController.swift in Sources */,
 				1255B4F42724167500976FE8 /* UIView_Pin.swift in Sources */,
+				121ACB172724303E00115D8D /* MappingModel.xcmappingmodel in Sources */,
 				1255B4EE272411A300976FE8 /* CoreDataNotes.xcdatamodeld in Sources */,
 				1255B4FD27242A7C00976FE8 /* Note+CoreDataClass.swift in Sources */,
 				125F108227218401006BE69A /* NoteCell.swift in Sources */,
@@ -374,6 +379,7 @@
 		1255B4EC272411A300976FE8 /* CoreDataNotes.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				1255B4FF27242B4300976FE8 /* CoreDataNotes 2.xcdatamodel */,
 				1255B4ED272411A300976FE8 /* CoreDataNotes.xcdatamodel */,
 			);
 			currentVersion = 1255B4ED272411A300976FE8 /* CoreDataNotes.xcdatamodel */;
